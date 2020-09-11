@@ -8,7 +8,7 @@ fun main() {
     val likes = scan.nextLine()
     val quantity = likes.length
     val characterLast = likes[quantity - 1]
-    val characterPenultimate = likes[quantity - 2]
+    val characterPenultimate = if (quantity > 1) likes[quantity - 2] else '0'
     if (characterLast == '1' && characterPenultimate != '1') {
         println("Понравилось $likes человеку")
     } else {
